@@ -1,0 +1,5 @@
+/Users/kirillfx/work/haskell/blocks/src/GraphQL.hs:51:1-63: error:
+    [{"message":"offset=487:\nunexpected \"fragment \"\nexpecting Ignored, TypeDefinition, end of input, or white space\n","locations":[{"column":1,"line":37}]}]
+   |
+51 | makeRelativeToProject "schema/schema.gql" >>= importGQLDocument
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -1,0 +1,43 @@
+scalar PageId
+scalar VideoId
+scalar DivId
+scalar ImageId
+scalar TextId
+
+union Block = TextBlock | DivBlock | ImageBlock | VideoBlock
+
+type TextBlock {
+    textId: TextId!
+    content: String!
+}
+
+type DivBlock {
+    divId: DivId!
+    blocks: [Block!]!
+}
+
+type ImageBlock {
+    imageId: ImageId!
+    src: String!
+}
+
+type VideoBlock {
+    videoId: VideoId!
+    title: String!
+    duration: Int
+    src: String!
+}
+
+type Page {
+    pageId: PageId!
+    title: String!
+    blocks: [Block!]!
+}
+
+
+type Query {
+    getPageById(id: PageId): Page
+    getPage(): Page
+}
+
+
