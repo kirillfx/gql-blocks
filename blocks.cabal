@@ -61,7 +61,6 @@ library
       NamedFieldPuns
       TemplateHaskell
       PartialTypeSignatures
-      ScopedTypeVariables
   build-depends:
       aeson
     , base >=4.7 && <5
@@ -118,7 +117,6 @@ executable blocks-exe
       NamedFieldPuns
       TemplateHaskell
       PartialTypeSignatures
-      ScopedTypeVariables
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aeson
@@ -178,7 +176,6 @@ test-suite blocks-test
       NamedFieldPuns
       TemplateHaskell
       PartialTypeSignatures
-      ScopedTypeVariables
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aeson

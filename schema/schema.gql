@@ -31,7 +31,7 @@ type VideoBlock {
 type Page {
     pageId: PageId!
     title: String!
-    blocks: [Block!]!
+    blocks: Block!
 }
 
 type Query {
