@@ -3,7 +3,35 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: morpheus-graphql-0.19.3@sha256:5fb584761abbd5a5745afae3a3a6c34bd762cc4255fcf163c3e0ee6bfee3bd94,36159
+    pantry-tree:
+      size: 51574
+      sha256: f96b74210b8de871e379a94a2eb4ede2c659107ddf8168767f1b583c46fc2e73
+  original:
+    hackage: morpheus-graphql-0.19.3
+- completed:
+    hackage: morpheus-graphql-app-0.19.3@sha256:e29509696add00611d153e7f147424135ffac8f91d1d4208f9dc8e7f88aa7181,6847
+    pantry-tree:
+      size: 7666
+      sha256: e064416c4f0fe03f152bb4cfce1b13d0bf1849e054f25707c437701adf1eaaa9
+  original:
+    hackage: morpheus-graphql-app-0.19.3@sha256:e29509696add00611d153e7f147424135ffac8f91d1d4208f9dc8e7f88aa7181,6847
+- completed:
+    hackage: morpheus-graphql-code-gen-0.19.3@sha256:1c091f26e5df356e803c8c7f246901c02837556bd3a4183d35f7226032427c8b,2307
+    pantry-tree:
+      size: 1096
+      sha256: 5faab59d02a85e70d92dc2d47a9b4821779d71554c516164341f1d433a0b8364
+  original:
+    hackage: morpheus-graphql-code-gen-0.19.3@sha256:1c091f26e5df356e803c8c7f246901c02837556bd3a4183d35f7226032427c8b,2307
+- completed:
+    hackage: morpheus-graphql-core-0.19.3@sha256:92446cf129fc320b97e5395c73d1a5a94eb55df41c1f1e2f81ca1ab3eea42040,13868
+    pantry-tree:
+      size: 19197
+      sha256: 8f9a888a71818fc940ab734962ee978ac9faf08db91373682f545fbb786423dd
+  original:
+    hackage: morpheus-graphql-core-0.19.3@sha256:92446cf129fc320b97e5395c73d1a5a94eb55df41c1f1e2f81ca1ab3eea42040,13868
 snapshots:
 - completed:
     size: 590100

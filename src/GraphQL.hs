@@ -7,16 +7,16 @@ import           Control.Monad.Except
 import           Data.Coerce
 import           Data.FileEmbed                   (makeRelativeToProject)
 import           Data.Morpheus                    (deriveApp, interpreter)
-import           Data.Morpheus.App
+-- import           Data.Morpheus.App
 import           Data.Morpheus.Document           (importGQLDocument)
 import           Data.Morpheus.Server
-import           Data.Morpheus.Subscriptions      (Event (..), Hashable)
+-- import           Data.Morpheus.Subscriptions      (Event (..), Hashable)
 import           Data.Morpheus.Types              (App, DecodeScalar,
                                                    EncodeScalar, GQLRequest,
                                                    GQLResponse, QUERY, ResolveQ,
                                                    Resolver, ResolverQ,
                                                    RootResolver (..),
-                                                   Undefined (..))
+                                                   Undefined (..), Arg(..))
 import           Data.Morpheus.Types.Internal.AST (GQLError (..), Msg (msg))
 import           Data.String
 import           GQLScalarDerivingVia
@@ -51,7 +51,7 @@ newtype TextId = TextId Text
 makeRelativeToProject "schema/schema.gql" >>= importGQLDocument
 
 -- samplePage :: GetPageArgs -> IO (Maybe (Page IO))
-samplePage :: MonadIO m => GetPageByIdArgs -> m (Maybe (Page m))
+samplePage :: MonadIO m => Arg "id" (Maybe PageId) -> m (Maybe (Page m))
 -- samplePage = error "Not implemented"
 samplePage _  = pure . Just $ Page
   (pure (PageId "page0"))
@@ -71,8 +71,7 @@ rootResolver :: RootResolver IO () Query Undefined Undefined
 rootResolver =
   RootResolver
     { queryResolver = Query
-        { getPageById = samplePage
-        , getPage = samplePage undefined
+        { getPage = samplePage
         },
       mutationResolver = Undefined,
       subscriptionResolver = Undefined

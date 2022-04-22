@@ -71,9 +71,7 @@ library
     , http-media
     , lens
     , morpheus-graphql
-    , morpheus-graphql-app
     , morpheus-graphql-core
-    , morpheus-graphql-subscriptions
     , mtl
     , relude
     , servant
@@ -132,9 +130,7 @@ executable blocks-exe
     , http-media
     , lens
     , morpheus-graphql
-    , morpheus-graphql-app
     , morpheus-graphql-core
-    , morpheus-graphql-subscriptions
     , mtl
     , relude
     , servant
@@ -194,9 +190,7 @@ test-suite blocks-test
     , http-media
     , lens
     , morpheus-graphql
-    , morpheus-graphql-app
     , morpheus-graphql-core
-    , morpheus-graphql-subscriptions
     , mtl
     , relude
     , servant

@@ -38,8 +38,8 @@ dependencies:
 # graphql 
 - morpheus-graphql
 - morpheus-graphql-core
-- morpheus-graphql-app
-- morpheus-graphql-subscriptions
+# - morpheus-graphql-app
+# - morpheus-graphql-subscriptions
 - file-embed
 - websockets
 - wai-websockets

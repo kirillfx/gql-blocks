@@ -3,7 +3,7 @@ module Server where
 
 import           Data.ByteString.Lazy.Char8  (ByteString)
 import           Data.Morpheus.Server        (httpPlayground)
-import           Data.Morpheus.Subscriptions (PubApp, SubApp, httpPubApp)
+-- import           Data.Morpheus.Subscriptions (PubApp, SubApp, httpPubApp)
 import           Data.Morpheus.Types         (App, GQLRequest, GQLResponse,
                                               render)
 import qualified Data.Text.Lazy              as LT

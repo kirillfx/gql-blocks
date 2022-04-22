@@ -40,8 +40,11 @@ packages:
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
-# extra-deps: []
-
+extra-deps:
+  - morpheus-graphql-0.19.3
+  - morpheus-graphql-app-0.19.3@sha256:e29509696add00611d153e7f147424135ffac8f91d1d4208f9dc8e7f88aa7181,6847
+  - morpheus-graphql-code-gen-0.19.3@sha256:1c091f26e5df356e803c8c7f246901c02837556bd3a4183d35f7226032427c8b,2307
+  - morpheus-graphql-core-0.19.3@sha256:92446cf129fc320b97e5395c73d1a5a94eb55df41c1f1e2f81ca1ab3eea42040,13868
 # Override default flag values for local packages and extra-deps
 # flags: {}
 

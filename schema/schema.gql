@@ -34,10 +34,8 @@ type Page {
     blocks: [Block!]!
 }
 
-
 type Query {
-    getPageById(id: PageId): Page
-    getPage(): Page
+    getPage(id: PageId): Page
 }
 
 
