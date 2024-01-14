@@ -7,10 +7,8 @@ import           Control.Monad.Except
 import           Data.Coerce
 import           Data.FileEmbed                   (makeRelativeToProject)
 import           Data.Morpheus                    (deriveApp, interpreter)
--- import           Data.Morpheus.App
 import           Data.Morpheus.Document           (importGQLDocument)
 import           Data.Morpheus.Server
--- import           Data.Morpheus.Subscriptions      (Event (..), Hashable)
 import           Data.Morpheus.Types              (App, DecodeScalar,
                                                    EncodeScalar, GQLRequest,
                                                    GQLResponse, QUERY, ResolveQ,
@@ -58,19 +56,10 @@ mkTextBlock :: Monad m => TextId -> Text -> Block m
 mkTextBlock i content = 
   BlockTextBlock $ TextBlock (pure i) (pure content)
 
-
--- data Context = Context {
---   blocks :: Map TextId TextBlock m
--- }
-
-
--- samplePage :: GetPageArgs -> IO (Maybe (Page IO))
 samplePage :: forall m. Monad m => MonadIO m => Arg "id" (Maybe PageId) -> m (Maybe (Page m))
--- samplePage = error "Not implemented"
 samplePage _  = pure . Just $ Page
   (pure (PageId "page0"))
   (pure "Page 0")
-  -- (error "Not implemented")
   (pure $ mkDivBlock (DivId "0") subBlocks)
   where
     subBlocks :: [Block m]
